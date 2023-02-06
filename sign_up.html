@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+<!-- saved from url=(0092)file:///C:/Users/nitya/Downloads/Login%20Page%20in%20HTML%20with%20CSS%20Code%20Example.html -->
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <title>Login Page in HTML with CSS Code Example</title>
+  <link href="./Login Page in HTML with CSS Code Example_files/css" rel="stylesheet">
+
+
+  <!-- 
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"><link rel="stylesheet" href="./style.css">
+-->
+
+  <style>
+    body {
+      background-image: linear-gradient(45deg, #FAB2FF 10%, #1904E5 100%);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      font-family: "Open Sans", sans-serif;
+      color: #333333;
+      align-items: center;
+    }
+
+    .box-form {
+     /*margin-left:  120px;
+     margin-right: 120px;*/
+      margin: 100px ;
+      
+     
+      background: #FFFFFF;
+      border-radius: 50px;
+      overflow: hidden;
+      display: flex;
+      flex: 1 1 100%;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 2px 2px 20px 10px #090b6f85;
+    }
+
+    @media (max-width: 980px) {
+      .box-form {
+        flex-flow: wrap;
+        text-align: center;
+        align-content: center;
+        align-items: center;
+      }
+   }
+
+    .box-form div {
+      height: auto;
+      width: 100%;
+    }
+
+    .box-form .right {
+      padding-top: 100px;
+      padding-right: 150px;
+      padding-bottom: 100px;
+      padding-left: 150px;
+      overflow: hidden;
+    }
+
+    @media (max-width: 980px) {
+      .box-form .right {
+        width: 100%;
+      }
+    }
+
+    .box-form .right p {
+      font-size: 14px;
+      color: #B0B3B9;
+    }
+
+    .box-form .right .inputs {
+      overflow: hidden;
+    }
+
+    .box-form .right input {
+      width: 100%;
+      padding: 5px;
+      margin-top: 25px;
+      font-size: 16px;
+      border: none;
+      outline: none;
+      border-bottom: 2px solid #351945;
+    }
+
+    .box-form .right .remember-me--forget-password {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .box-form .right .remember-me--forget-password input {
+      margin: 0;
+      margin-right: 7px;
+      width: auto;
+    }
+
+    .box-form .right button {
+
+      color: #fff;
+      font-size: 16px;
+      padding: 12px 35px;
+      border-radius: 50px;
+      display: inline-block;
+      border: 0;
+      outline: 0;
+      box-shadow: 2px 4px 20px 1px #49c628a6;
+      background-image: linear-gradient(135deg, #70F570 10%, #49C628 100%);
+    }
+
+    label {
+      display: block;
+      position: relative;
+      margin-left: 30px;
+    }
+
+    label::before {
+      content: ' \f00c';
+      position: absolute;
+      font-family: FontAwesome;
+      background: transparent;
+      border: 3px solid #70F570;
+      border-radius: 4px;
+      color: transparent;
+      left: -30px;
+      transition: all 0.2s linear;
+    }
+
+    label:hover::before {
+      font-family: FontAwesome;
+      content: ' \f00c';
+      color: #fff;
+      cursor: pointer;
+      background: #70F570;
+    }
+
+    label:hover::before .text-checkbox {
+      background: #70F570;
+    }
+
+    label span.text-checkbox {
+      display: inline-block;
+      height: auto;
+      position: relative;
+      cursor: pointer;
+      transition: all 0.2s linear;
+    }
+
+    label input[type="checkbox"] {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box-form">
+    <div class="right">
+
+      <h1 style="text-align:center">Create Account</h1>
+
+      <div class="inputs">
+        <input type="text" placeholder="First name">
+        <br>
+        <input type="text" placeholder="Last name">
+        <br>
+        <input type="email" placeholder=" your email">
+        <br>
+        <input type="tel" placeholder="Phone number(whatsapp number)">
+        <br>
+        
+        <input type="tel" placeholder="age">
+        <br>
+        <input type="password" placeholder="password">
+        <br>
+        <input type="password" placeholder="Confirm password">
+
+      </div>
+
+      <br><br>
+
+      <div class="remember-me--forget-password">
+        <!-- Angular -->
+        <label>
+          <input type="checkbox" name="item" checked="">
+          <span class="text-checkbox">Remember me</span>
+        </label>
+        <p><a
+            href="file:///C:/Users/nitya/OneDrive/Desktop/CodingStuff/web%20development/new%20sign%20up%20page.html#">Already
+            have account</a> </p>
+      </div>
+
+      <br>
+      <div style="text-align:center;"><button style="align-content: center;">Ready to Go</button> </div>
+
+    </div>
+
+
+    <!-- partial:index.partial.html -->
+
+    <!-- partial -->
+
+
+
+
+  </div>
+</body>
+
+</html>

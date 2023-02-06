@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Validation form</title>
+    <link rel="stylesheet" type="text/css" href="validationform.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Quicksand&display=swap"
+      rel="stylesheet"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"
+    />
+  </head>
+  <body>
+    <div class="container">
+       <div class="contact-box">
+
+          <div class="right">
+            <h2 id="feedback">Hey Buddy!</h2>
+            <form id="form" action="#">
+              <div class="inputbox">
+            <input type="text" class="field" placeholder="Your Name" name="" required />
+            <input type="email" class="field" placeholder="Your Email" name=""id="email" onkeydown="Validation()" />
+            <span id="text"></span>
+            <input type="tel" class="field" placeholder="Phone" id="phone" onkeydown="number()"/>
+            <span id="num"></span>
+            <textarea placeholder="Message" class="field"></textarea>
+            <button class="upload" type="submit" value="submit">Send</button>
+            </div>
+           </form> 
+          </div>
+        </div>
+      </div>
+
+      <script type="text/javascript">
+        function Validation()
+        {
+          var form = document.getElementById("form");
+          var email = document.getElementById("email").value;
+          var text = document.getElementById("text");
+          var pattern=/^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+
+          if(email.match(pattern)){
+            form.classList.add("valid")
+            form.classList.remove("Invalid")
+            text.innerHTML="your email is valid";
+          text.style.color="#00ff00";
+          }
+          else{
+            form.classList.remove("valid")
+            form.classList.add("Invalid")
+            text.innerHTML="please enter valid email";
+            text.style.color="#ff0000";
+          }
+
+          if(email==""){
+            form.classList.remove("valid")
+            form.classList.remove("Invalid")
+            text.innerHTML="";
+          text.style.color="#00ff00";
+          }
+        }
+      
+       function number(){ 
+          var form= document.getElementById("form");
+          var phone= document.getElementById("phone").value;
+          var num = document.getElementById("num");
+          var pat=/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+
+          if(phone.match(pat)){
+            form.classList.add("valid")
+            form.classList.remove("Invalid")
+            text.innerHTML="your phone number is valid";
+          text.style.color="#00ff00";
+          }
+
+           else{
+            form.classList.remove("valid")
+            form.classList.add("Invalid")
+            text.innerHTML="please enter valid phone number";
+            text.style.color="#ff0000";
+          }
+
+          if(phone==""){
+            form.classList.remove("valid")
+            form.classList.remove("Invalid")
+            text.innerHTML="";
+          text.style.color="#00ff00";
+        }
+      }
+        
+      </script>
+    </body>
+  </html>
+  
+  
