@@ -1,0 +1,19 @@
+.boxy{  
+    position: relative;
+    top: 50%;
+    /* bottom: 50%;
+    right:25%; */
+    left:50%;
+    transform: translate(-50%, -50%);
+    margin: 0.2rem auto;
+    max-width: 95%;
+    background: #FFFFFF;
+    border-radius: 10px;
+    overflow: hidden;
+    /*margin-top: 2rem;*/
+    flex: 1 1 100%;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 20px 10px #605b5c90;
+    padding:2rem 2rem;
+}
