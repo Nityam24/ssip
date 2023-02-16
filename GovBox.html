@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Government Page</title>
+
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+  <link rel="stylesheet" type="text/css" href="homepage.css" />
+  <link rel="stylesheet" type="text/css" href="Base1.css" />
+</head>
+<style>
+  .whole {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    /* border-bottom: #594ef7 solid 2px; */
+    z-index: 1;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    width: 100%;
+
+
+  }
+
+  ::placeholder {
+    color: black;
+    align-content: center;
+  }
+
+  .upperFilters {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    /* padding: 1rem; */
+    background-color: #ffffff;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .shown_Result {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    overflow: auto;
+    max-height: 73.5%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .lowerFilter {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .movement {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    gap: 5rem;
+    width: 100%;
+    background: grey;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%);
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+  }
+
+  #clg {
+    width: 20vw;
+    height: 5vh;
+    border: none;
+    border-bottom: #594ef7 solid 2px;
+  }
+</style>
+
+</head>
+
+<body>
+  <div class="mainbox">
+    <!-- <form method="POST" action="">
+          {% csrf_token %} -->
+    <aside id="menu">
+      <div class="logo">
+        <div class="icon">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuifnuAf5eoTwRtNwuLq53TA57V4-IvENVDg&usqp=CAU"
+            alt="" />
+        </div>
+        <div class="title">
+          <h3>SCRAP RESULT</h3>
+        </div>
+      </div>
+
+      <div class="items">
+        <a href="{% url 'home' %}">
+          <li>Result</li>
+        </a>
+        <a href="{% url 'scholarship' %}">
+          <li>Scholarship Detail</li>
+        </a>
+        <a href="{% url 'login' %}">
+          <li>Admin Login</li>
+        </a>
+        <a href="{% url 'clgregister' %}">
+          <li>College Registration</li>
+        </a>
+        <a href="{% url 'contact' %}">
+          <li>Contact us</li>
+        </a>
+      </div>
+    </aside>
+    <div class="inter">
+      <div class="navi">
+        <p id="header">Welcome to scrap result</p>
+      </div>
+      <div class="boxy">
+        <div class="whole">
+          <div class="upperFilters">
+            <input id="clg" type="text" placeholder="College Name">
+            <!-- <input list="sem1" class="upload" name="sem" placeholder="Semester">
+                            <datalist id="sem1">
+                                <option value="Sem 1"></option>
+                                <option value="Sem 2"></option>
+                                <option value="Sem 3"></option>
+                                <option value="Sem 4"></option>
+                                <option value="Sem 5"></option>
+                                <option value="Sem 6"></option>
+                                <option value="Sem 7"></option>
+                                <option value="Sem 8"></option>
+                            </datalist> -->
+
+
+            <input list="sem1" class="upload" name="sem" placeholder="Semester ">
+            <datalist id="sem1">
+              <option value="Sem 1"></option>
+              <option value="Sem 2"></option>
+              <option value="Sem 3"></option>
+              <option value="Sem 4"></option>
+              <option value="Sem 5"></option>
+              <option value="Sem 6"></option>
+              <option value="Sem 7"></option>
+              <option value="Sem 8"></option>
+            </datalist>
+
+
+            <input list="sem1" class="upload" name="sem" placeholder="Semester">
+            <datalist id="sem1">
+              <option value="Sem 1"></option>
+              <option value="Sem 2"></option>
+              <option value="Sem 3"></option>
+              <option value="Sem 4"></option>
+              <option value="Sem 5"></option>
+              <option value="Sem 6"></option>
+              <option value="Sem 7"></option>
+              <option value="Sem 8"></option>
+            </datalist>
+          </div>
+
+          <!-- <div class="lowerFilter">
+                        
+                            <button style="align-content: center" class="upload">
+                              search
+                            </button>
+                          
+                    </div> -->
+        </div>
+
+        <div class="shown_Result" id="shown_Result">
+
+
+        </div>
+        <div class="movement">
+          <button>
+            << </button>
+              <button>
+                < </button>
+                  <button> > </button>
+                  <button> >> </button>
+        </div>
+      </div>
+    </div>
+    <!-- </form> -->
+  </div>
+
+  <script>
+    function creatediv(data) {
+      var chilDdiv = document.createElement('div');
+      chilDdiv.textContent = data;
+      return chilDdiv;
+    }
+
+    function appendChild(parent, children) {
+      children.forEach(function (child) {
+        parent.appendChild(child);
+      });
+    }
+
+    var shown_Result = document.getElementById('shown_Result');
+    console.log(shown_Result);
+
+    items = creatediv(obj[i].name);
+      appendChild(shown_Result, items);
+      i++;
+    
+
+
+
+
+    let obj = [
+      {
+        name: 'nityam',
+        enroll: 1290,
+        age: 19
+      }, {
+        name: 'rohan',
+        enroll: 1290,
+        age: 19
+      }, {
+        name: 'shubham',
+        enroll: 1290,
+        age: 19
+      }
+    ];
+
+
+  </script>
+
+
+  <script src="student_page.js"></script> 
+  
+
+
+
+</body>
+
+</html>

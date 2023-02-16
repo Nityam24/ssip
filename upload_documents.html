@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload_document</title>
+    <link
+    rel="stylesheet" href="Base.css" />
+</link>
+<link
+      rel="stylesheet"
+      type="text/css"
+      href="admin_style.css"
+    />
+
+</head>
+<body>
+    <div class="mainbox">
+        <form method="POST" action="">
+          <!-- <aside id="menu">
+            <div class="logo">
+              <div class="icon">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuifnuAf5eoTwRtNwuLq53TA57V4-IvENVDg&usqp=CAU"
+                  alt=""
+                />
+              </div>
+              <div class="title">
+                <h3>SCRAP RESULT</h3>
+              </div>
+            </div> -->
+  
+            <!-- <div class="items">
+              <a href="{% url 'home' %}"><li>Result</li></a>
+              <a href="{% url 'scholarship' %}"><li>Scholarship Detail</li></a>
+              <a href="{% url 'login' %}"><li>Admin Login</li></a>
+              <a href="{% url 'clgregister' %}"><li>College Registration</li></a>
+              <a href="{% url 'contact' %}"><li>Contact us</li></a>
+            </div>
+          </aside> -->
+          <!-- <div class="inter">
+            <div class="navi">
+              <p id="header">Welcome to scrap result</p>
+            </div> -->
+            <div class="boxy">
+              <div class="right">
+                <h1 style="text-align: center">Upload Documents</h1>
+                <br>
+                <br>
+                <div class="inputs" style="display: flex; justify-content: center; gap:1rem; border-bottom-style:none; " >
+                  <div>
+                  <label for="doc">Select Document: </label>
+                  <select name="doc" id="sem" >
+                    <option value="Addhar card">Addhar card</option>
+                    <option value="Income Certificate">Income Certificate </option>
+                    <option value="Income Tax Return">Income Tax Return</option>
+                    <option value="12th Result">12th Result</option>
+                    <option value="Father Pan Card">Father Pan Card</option>
+                    <option value="Mother Pan Card">Mother Pan Card</option>
+                    <option value="Passbook 1st page">Passbook 1st Page</option>
+                    <option value="Mother Pan Card">Mother Pan Card</option>
+                    <option value="Ration Card">Ration Card</option>
+                  </select>
+                  </div>
+                  <div >
+                  <label for="sem">choose file: </label>
+                  <!-- <select name="Semester" id="sem">
+                    <option value="1">Sem 1</option>
+                    <option value="2">Sem 2</option>
+                    <option value="3">Sem 3</option>
+                    <option value="4">Sem 4</option>
+                    <option value="5">Sem 5</option>
+                    <option value="6">Sem 6</option>
+                    <option value="7">Sem 7</option>
+                    <option value="8">Sem 8</option>
+                  </select> -->
+                  <form method="POST" action="" enctype="multipart/form-data">
+                    <!-- <label for="excel_file">Upload result exel file:</label> -->
+                    <input type="file" name="PDF" accept="application/pdf" id="semy" />
+                  </form>
+                  </div>
+                </div>
+                <br />
+                <div style="text-align: center">
+                  <button style="align-content: center" class="upload" id="uploadButton">
+                    upload
+                  </button>
+                </div>
+            
+                <p id="messages">   </p>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <script>
+        document.getElementById("uploadButton").addEventListener("click", function() {
+  var semy = document.getElementById("semy");
+  var file = semy.files[0];
+
+  if (!file) {
+    return;
+  }
+
+  var sem = document.getElementById("sem");
+  var selectedOption = sem.options[sem.selectedIndex];
+  selectedOption.disabled = true;
+  sem.selectedIndex = 0;
+});
+
+      </script>
+</body>
+</html>

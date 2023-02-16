@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <title>Input Div Example</title>
+    <link rel="icon" type="image/x-icon" href="C:\Users\nitya\OneDrive\Desktop\favicon.ico">
+  </head>
+  <body>
+    <div id="main">
+        ❌
+    </div>
+    <script>
+        main = document.getElementById('main');
+        main.addEventListener("click",Main);
+
+    function Main(e){
+        e.preventDefault();
+      function createInputDiv() {
+       
+        // Create a div element
+        let div = document.createElement("div");
+        div.style.margin = "10px";
+
+        // Create a text input element
+        let input = document.createElement("input");
+        input.type = "text";
+        input.id = "textInput";
+        input.placeholder = "Enter text here...";
+        input.style.margin = "10px";
+
+        // Create a button element
+        let button = document.createElement("button");
+        button.innerHTML = "Submit";
+        button.style.margin = "10px";
+
+        // Add the input and button to the div
+        div.appendChild(input);
+        div.appendChild(button);
+
+        // Add the div to the document body
+        document.body.appendChild(div);
+
+        // Add an event listener to the button
+        button.addEventListener("click", function() {
+          // Get the value of the input field
+          let inputValue = document.getElementById("textInput").value;
+
+          // Create a new element to display the input value
+          let displayElement = document.createElement("p");
+          displayElement.innerHTML = inputValue;
+          displayElement.style.margin = "10px";
+
+          // Add the display element to the div
+          div.appendChild(displayElement);
+        });
+      }
+
+      // Call the createInputDiv function to create the input div
+      createInputDiv();
+    }
+    </script>
+  </body>
+</html>

@@ -4,48 +4,56 @@
     <meta charset="UTF-8" />
     <meta http-equiv="XU-A-compatible" content="IE-edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <title>Government Home Page</title>
+    <title>base</title>
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
     />
 
-    <link rel="stylesheet" href="gHome.css" /> 
+    <link
+    rel="stylesheet" href="Base.css" />
+    <link
+    rel="stylesheet" href="boxy.css" />
 
     <script
       src="https://code.jquery.com/jquery-3.6.1.min.js"
       integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
       crossorigin="anonymous"
     ></script>
-   
+    
   </head>
 
   <body>
+    <div class="mainbox">
     <aside id="menu">
       <div class="logo">
+        <div class="icon">
         <img
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuifnuAf5eoTwRtNwuLq53TA57V4-IvENVDg&usqp=CAU"
           alt=""
         />
-
-        <h2>SCRAP RESULT</h2>
+        </div>
+        <div class="title">
+        <h3>SCRAP RESULT</h3>
+        </div>
       </div>
 
       <div class="items">
         <li>Result</li>
         <li>Scholarship Detail</li>
         <li>Admin Login</li>
-        <li>College Registration</li>
         <li>Feedback</li>
-        
+        <li>Notice</li>
         <li>Contact us</li>
       </div>
-    </aside>
+      </aside>
+    </div>
 
-    <section id="inter">
+    <div class="inter">
       <div class="navi">
-        <div class="n1">
-          <div id="menu-btn">
+        <p id="header"> Welcome to scrap result </p>
+         <div class="n1"> 
+           <div id="menu-btn">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="35"
@@ -58,21 +66,35 @@
                 d="M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zM380 696c-22.1 0-40-17.9-40-40s17.9-40 40-40s40 17.9 40 40s-17.9 40-40 40zm0-144c-22.1 0-40-17.9-40-40s17.9-40 40-40s40 17.9 40 40s-17.9 40-40 40zm0-144c-22.1 0-40-17.9-40-40s17.9-40 40-40s40 17.9 40 40s-17.9 40-40 40zm304 272c0 4.4-3.6 8-8 8H492c-4.4 0-8-3.6-8-8v-48c0-4.4 3.6-8 8-8h184c4.4 0 8 3.6 8 8v48zm0-144c0 4.4-3.6 8-8 8H492c-4.4 0-8-3.6-8-8v-48c0-4.4 3.6-8 8-8h184c4.4 0 8 3.6 8 8v48zm0-144c0 4.4-3.6 8-8 8H492c-4.4 0-8-3.6-8-8v-48c0-4.4 3.6-8 8-8h184c4.4 0 8 3.6 8 8v48z"
               />
             </svg>
-          </div>
-          &nbsp;
-          <div id="upheading"><h1>WELCOME TO SCRAP RESULT</h1></div>
+          </div> 
+          
          
         </div>
 
         
+    </div> -->
+    </div>
+    <div class="boxy">
+        <ul>
+			<li>Principal:</li>
+				<ul style="list-style-type:disc;">
+					<li>contact:<a href="tel:+912323232323">+912323232323</a></li>
+					<li>email:<a href="email:principal@clg.com">principal@clg.com</a></li>
+					<li>address:college address</li>
+				</ul>
+			<li>Admin:</li>
+			<ul style="list-style-type:disc;">
+				<li>contact:<a href="tel:+912323245323">+912323245323</a></li>
+				<li>email:<a href="email:admin@clg.com">admin@clg.com</a></li>
+				<li>address:college address</li>
+			</ul>			
     </div>
     
     <br />
     <br />
-
-
-    </section>
-
+    
+    
     <script src="student_page.js"></script>
+    </div>
   </body>
 </html>

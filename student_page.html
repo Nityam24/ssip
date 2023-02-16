@@ -12,11 +12,14 @@
 
     <link rel="stylesheet" href="student_style.css" />
 
-    <script
+    <!-- <script
       src="https://code.jquery.com/jquery-3.6.1.min.js"
       integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
       crossorigin="anonymous"
-    ></script>
+    ></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/3.5.0/jspdf.min.js"></script> -->
+
+   
   </head>
 
   <body>
@@ -67,13 +70,13 @@
 
      
           <div>
-            <button class="upload" id="just">Download</button>
+            <button class="upload" id="downloadButton">Download</button>
           </div>
         </div>
       </div>
       <br />
       <br />
-      <div class="boxy">
+      <div class="boxy" id="boxy">
         <table width="100%" id="uptable">
           <thead>
             <tr>
@@ -186,7 +189,53 @@
         </table>
       </div>
     </section>
-
     <script src="student_page.js"></script>
+    <!-- <script>
+    
+      // Get the content of the div as a string
+        function getDivContent() {
+            var divContent = document.getElementById("boxy").innerHTML;
+            return divContent;
+          }
+          
+          // Convert the div content to a PDF
+          function downloadPDF() {
+            var divContent = getDivContent();
+          
+            // create a new pdf with single page
+            var doc = new jsPDF();
+            doc.text(divContent, 10, 10);
+            doc.save("divContent.pdf");
+          }
+          
+          // Add an event listener to the download button
+          var downloadButton = document.getElementById("downloadButton");
+          downloadButton.addEventListener("click", downloadPDF);
+          
+        </script> -->
   </body>
+
+   <!-- <script>
+    
+    // Get the content of the div as a string
+      function getDivContent() {
+          var divContent = document.getElementById("boxy").innerHTML;
+          return divContent;
+        }
+        
+        // Convert the div content to a PDF
+        function downloadPDF() {
+          var divContent = getDivContent();
+        
+          // create a new pdf with single page
+          var doc = new jsPDF();
+          doc.text(divContent, 10, 10);
+          doc.save("divContent.pdf");
+        }
+        
+        // Add an event listener to the download button
+        var downloadButton = document.getElementById("downloadButton");
+        downloadButton.addEventListener("click", downloadPDF);
+        
+      </script> -->
 </html>
